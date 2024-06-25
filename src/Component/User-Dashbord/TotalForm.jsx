@@ -56,7 +56,7 @@ const TotalForm = () => {
         console.error("Failed to fetch form count");
       }
     } catch (error) {
-      console.error("Error fetching form count:", error);
+      console.error("Error fetching form count:");
     }
   };
 

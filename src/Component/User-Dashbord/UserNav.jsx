@@ -55,7 +55,7 @@ function UserNav() {
 
       navigate("/");
     } catch (error) {
-      console.error("Logout failed:", error);
+      alert("Logout failed:");
     }
   }
 
