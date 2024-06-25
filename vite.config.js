@@ -8,4 +8,11 @@ export default defineConfig({
     port:80,
    
   },
+  proxy: {
+    '/api': {
+      target: 'http://13.51.38.112',
+      changeOrigin: true,
+      secure: false,
+    },
+  },
 });
