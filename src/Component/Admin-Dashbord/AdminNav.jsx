@@ -49,7 +49,7 @@ function AdminNav() {
 
       navigate("/");
     } catch (error) {
-      console.error("Logout failed:", error.response ? error.response.data : error.message);
+       alert("Logout failed:");
     }
   }
 

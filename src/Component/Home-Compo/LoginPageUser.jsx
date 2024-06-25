@@ -61,7 +61,7 @@ const LoginPageUser = () => {
                     <input
                         type='email'
                         id='email'
-                        className='lg:w-[20rem] lg:h-[3rem] w-[25rem] h-[4rem] ml-3'
+                        className='lg:w-[20rem] lg:h-[3rem] w-[25rem] h-[4rem] ml-3 pl-2'
                         placeholder='Email'
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
@@ -73,7 +73,7 @@ const LoginPageUser = () => {
                         <IoLockClosedSharp className='text-3xl md:mt-2 lg:mt-1 mt-3 lg:ml-2 ml-3' />
                     </label>
                     <input
-                        className='lg:w-[20rem] lg:h-[3rem] w-[25rem] h-[4rem] ml-3'
+                        className='lg:w-[20rem] lg:h-[3rem] w-[25rem] h-[4rem] ml-3 pl-2'
                         type='password'
                         id='password'
                         placeholder='Password'

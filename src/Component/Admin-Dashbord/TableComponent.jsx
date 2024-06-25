@@ -35,16 +35,16 @@ const TableComponent = () => {
 
     try {
       const response = await axios.delete(
-        "http://13.51.38.112/api/api/v1/admins/delete-user",
+        `http://13.51.38.112/api/api/v1/admins/delete-user`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
           },
-          data: { username: usernameToDelete }, // Send username in the request body
+          data: { username: usernameToDelete }
         }
       );
-      alert("Are you sure you want to delete this user?");
-      fetchUsers();
+      alert("User deleted successfully!");
+      fetchUsers(); // Refresh the user list after deletion
     } catch (error) {
       console.error("Failed to delete user:", error.message);
     }

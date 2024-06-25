@@ -54,8 +54,9 @@ const Register = () => {
                 password: '',
             });
             alert("Registration Successful");
+            
         } catch (error) {
-            console.error('Error:', error);
+            alert("Registration failed. User already exists or there was an error.");
           
         }
     };

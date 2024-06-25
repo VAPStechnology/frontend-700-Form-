@@ -17,7 +17,7 @@ function SubmitAllUsersForm() {
         });        
         setFormsData(response.data.data); 
       } catch (error) {
-        console.error('Error fetching forms:', error);
+        console.error('Error fetching forms:');
        
       }
     };
