@@ -2,7 +2,7 @@
 export const fetchFormCount = async (username) => {
   try {
     const token = localStorage.getItem('token');
-    const response = await fetch(`http://13.51.38.112/api/api/v1/forms/user/${username}/form-submissions/count`, {
+    const response = await fetch(`https://aspirecareerconsultancy.online/api/v1/forms/user/${username}/form-submissions/count`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },

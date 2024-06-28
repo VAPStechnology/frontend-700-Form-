@@ -10,7 +10,7 @@ function SubmitAllUsersForm() {
     const fetchData = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get(`http://13.51.38.112/api/api/v1/forms/user/forms`, {
+        const response = await axios.get(`https://aspirecareerconsultancy.online/api/v1/forms/user/forms`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

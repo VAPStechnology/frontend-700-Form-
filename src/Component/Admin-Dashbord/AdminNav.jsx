@@ -35,7 +35,7 @@ function AdminNav() {
       }
 
       const response = await axios.post(
-        'http://13.51.38.112/api/api/v1/admins/logoutAdmin',
+        'https://aspirecareerconsultancy.online/api/v1/admins/logoutAdmin',
         {},
         {
           headers: {

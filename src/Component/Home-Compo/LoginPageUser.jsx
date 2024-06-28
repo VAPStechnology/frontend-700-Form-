@@ -21,7 +21,7 @@ const LoginPageUser = () => {
             return;
         }
         try {
-            const response = await axios.post('http://13.51.38.112/api/api/v1/users/login', {
+            const response = await axios.post('https://aspirecareerconsultancy.online/api/v1/users/login', {
                 email: email,
                 password: password,
             });

@@ -40,7 +40,7 @@ function UserNav() {
     try {
       const token = localStorage.getItem('token'); // Fetch token from localStorage
       const response = await axios.post(
-        'http://13.51.38.112/api/api/v1/users/logout',
+        'https://aspirecareerconsultancy.online/api/v1/users/logout',
         {},
         {
           headers: {

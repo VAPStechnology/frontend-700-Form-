@@ -14,7 +14,7 @@ const TableComponent = () => {
 
     try {
       const response = await axios.get(
-        "http://13.51.38.112/api/api/v1/admins/all-users",
+        "https://aspirecareerconsultancy.online/api/v1/admins/all-users",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -35,7 +35,7 @@ const TableComponent = () => {
 
     try {
       const response = await axios.delete(
-        `http://13.51.38.112/api/api/v1/admins/delete-user`,
+        `https://aspirecareerconsultancy.online/api/v1/admins/delete-user`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -61,7 +61,7 @@ const TableComponent = () => {
 
     try {
       const response = await axios.get(
-        "http://13.51.38.112/api/api/v1/admins/all-users",
+        "https://aspirecareerconsultancy.online/api/v1/admins/all-users",
         {
           params: { username },
           headers: {

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef,useContext } from 'react';
+import React, { useState, useEffect, useRef, useContext } from 'react';
 import axios from 'axios';
 import { UserContext } from '../../Context/UserContext';
 
@@ -41,8 +41,7 @@ const Register = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://13.51.38.112/api/api/v1/users/register', formData);
-            // console.log('response data', response.data);
+            const response = await axios.post('https://aspirecareerconsultancy.online/api/v1/users/register', formData); // Corrected URL
 
             const token = response.data.session_token;
             localStorage.setItem('token', token); // Store token in localStorage
@@ -57,7 +56,6 @@ const Register = () => {
             
         } catch (error) {
             alert("Registration failed. User already exists or there was an error.");
-          
         }
     };
 
