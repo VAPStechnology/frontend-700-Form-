@@ -34,10 +34,10 @@ const LoginPageUser = () => {
                 localStorage.setItem('token', accessToken);
         
                 if (response.data.callback_url) {
-                    window.location.href = response.data.callback_url; // Redirect to callback URL if provided
+                    window.location.href = response.data.callback_url; 
                 } else {
-                    login(username); // Update login state
-                    navigate('/user'); // Navigate to user dashboard
+                    login(username); 
+                    navigate('/user'); 
                 }
             } else {
                 setError('Login failed. Please check your credentials and try again.');
@@ -64,7 +64,7 @@ const LoginPageUser = () => {
                         className='lg:w-[20rem] lg:h-[3rem] w-[25rem] h-[4rem] ml-3 pl-2'
                         placeholder='Email'
                         value={email}
-                        onChange={(e) => setEmail(e.target.value)}
+                        onChange={(e) => setEmail(e.target.value.trim())}
                         required
                     />
                 </div>
@@ -78,7 +78,7 @@ const LoginPageUser = () => {
                         id='password'
                         placeholder='Password'
                         value={password}
-                        onChange={(e) => setPassword(e.target.value)}
+                        onChange={(e) => setPassword(e.target.value.trim())}
                         required
                     />
                 </div>

@@ -82,41 +82,11 @@ function UserNav() {
             )}
           </div>
 
-          <div className="relative">
-            <div
-              className="flex items-center cursor-pointer"
-              onClick={toggleMessageDropdown}
-            >
-              <MdOutlineEmail />
-              <p className="mt-[-0.2rem] ml-1">Message</p>
-            </div>
-            {isMessageDropdownOpen && (
-              <div className="absolute bg-white top-full left-0 mt-1 py-2 px-4 rounded-lg shadow">
-                {/* Dropdown content here */}
-              </div>
-            )}
-          </div>
 
-          <div className="relative">
-            <div
-              className="flex items-center cursor-pointer"
-              onClick={toggleSettingDropdown}
-            >
-              <IoSettingsOutline />
-              <p className="mt-[-0.2rem] ml-1">Setting</p>
-            </div>
-            {isSettingDropdownOpen && (
-              <div className="absolute bg-white top-full left-0 mt-1 py-2 px-4 rounded-lg shadow">
-                {/* Dropdown content here */}
-              </div>
-            )}
-          </div>
+
         </div>
 
         <div className="flex md:pt-4 pt-8">
-          <div className="text-white lg:text-3xl md:text-2xl text-xl md:mt-4 mt-3 mr-6">
-            <FaSearch />
-          </div>
           
           <Button
             onClick={handleLogout}

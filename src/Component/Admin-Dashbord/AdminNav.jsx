@@ -76,19 +76,8 @@ function AdminNav() {
 
             {/* right side */}
             <div className="flex items-center mt-[-2rem]">
-              <FaSearch className="text-white text-2xl mr-4" />
-              {/* <div
-                className="flex flex-col cursor-pointer"
-                onClick={New1}
-              >
-                <FaSortAmountDownAlt className="text-white w-20 h-10 mr-4 text-2xl" />
-                <div className="ml-6 text-white">Sort By</div>
-              </div>
-              {Sort && <SearchForm />} */}
+            
 
-              <div className="bg-white lg:w-[8.5rem] lg:h-14 md:w-[6.5rem] md:h-12 w-[5rem] h-8 rounded-lg transition duration-300 md:text-xl text-sm text-center lg:pt-3 md:pt-2 pt-1 text-[#EA5455] font-semibold border-[#EA5455] border-2 hover:bg-[#EA5455] hover:border-white hover:text-white mr-4">
-                Agreement
-              </div>
               <Button
                 onClick={handleLogout}
                 item1={

@@ -31,10 +31,10 @@ const LoginPageAdmin = () => {
                 login(); // Update login state
                 navigate('/admin');
             } else {
-                setError('Login failed. Please check your Email and Passowrd.');
+                setError('Login failed. Please check your Email and Password.');
             }
         } catch (error) {
-            setError("Login failed. Please check your Email and Passowrd.");
+            setError("Login failed. Please check your Email and Password.");
         }   
     };
 
@@ -53,7 +53,7 @@ const LoginPageAdmin = () => {
                         className='lg:w-[20rem] lg:h-[3rem] w-[25rem] h-[4rem] ml-3 pl-2'
                         placeholder='email'
                         value={email}
-                        onChange={(e) => setEmail(e.target.value)}
+                        onChange={(e) => setEmail(e.target.value.trim())}
                         required
                     />
                 </div>
@@ -68,7 +68,7 @@ const LoginPageAdmin = () => {
                         id="password"
                         placeholder='password'
                         value={password}
-                        onChange={(e) => setPassword(e.target.value)}
+                        onChange={(e) => setPassword(e.target.value.trim())}
                         required
                     />
                 </div>
