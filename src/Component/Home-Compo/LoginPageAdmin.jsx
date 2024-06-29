@@ -4,13 +4,20 @@ import { MdEmail } from "react-icons/md";
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { useAuth } from '../../Context/AuthContext'; 
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
+
 
 const LoginPageAdmin = () => {
     const [password, setPassword] = useState('');
+    const [showPassword, setShowPassword] = useState(false);
     const [email, setEmail] = useState('');
     const [error, setError] = useState('');
     const navigate = useNavigate();
     const { login } = useAuth(); 
+
+    const handlePassword = () => {
+        setShowPassword(!showPassword);
+    }
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -40,7 +47,7 @@ const LoginPageAdmin = () => {
 
     return (
         <div className='bg-slate-600 lg:w-full w-[60rem] md:w-[70rem] lg:h-[73rem] h-[130rem] flex justify-center items-center'>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className='relative'>
                 <div className='text-center text-5xl font-Roboto text-white font-bold pb-10'>Admin Login</div>
                 <hr className='border-white mb-16'></hr>
                 <div className='flex md:ml-0 ml-[2rem] mt-10'>
@@ -58,19 +65,26 @@ const LoginPageAdmin = () => {
                     />
                 </div>
 
-                <div className='flex mt-10 md:ml-0 ml-[2rem]'>
+                <div className='flex mt-10 md:ml-0 ml-[2rem] relative'>
                     <label htmlFor="password" className='lg:w-12 w-14 bg-orange-500 text-white'>
                         <IoLockClosedSharp className='text-3xl md:mt-2 lg:mt-1 mt-3 lg:ml-2 ml-3' />
                     </label>
                     <input
-                        className='lg:w-[20rem] lg:h-[3rem] w-[25rem] h-[4rem] ml-3 pl-2'
-                        type="password"
+                        className='lg:w-[20rem] lg:h-[3rem] w-[25rem] h-[4rem] ml-3 pl-2 pr-10' // Added pr-10 for padding to the right
+                        type={showPassword ? 'text' : 'password'}
                         id="password"
                         placeholder='password'
                         value={password}
                         onChange={(e) => setPassword(e.target.value.trim())}
                         required
                     />
+                    <button
+                        type='button'
+                        onClick={handlePassword}
+                        className='absolute right-3 top-1/2 transform -translate-y-1/2 text-xl text-gray-700'
+                    >
+                        {showPassword ? <FaEyeSlash /> : <FaEye />}
+                    </button>
                 </div>
                 
                 <hr className='border-white mt-16'></hr>

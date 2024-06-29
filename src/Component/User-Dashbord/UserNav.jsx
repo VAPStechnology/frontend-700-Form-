@@ -8,11 +8,13 @@ import { FaSearch } from "react-icons/fa";
 import Button from "../ReuseableComponent/Button";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { useAuth } from "../../Context/AuthContext";
 
 function UserNav() {
   const [isWelcomeDropdownOpen, setIsWelcomeDropdownOpen] = useState(false);
   const [isMessageDropdownOpen, setIsMessageDropdownOpen] = useState(false);
   const [isSettingDropdownOpen, setIsSettingDropdownOpen] = useState(false);
+  const { logout } = useAuth();
   const navigate = useNavigate();
 
   // Function to toggle welcome dropdown
@@ -52,7 +54,7 @@ function UserNav() {
       // Assuming the response contains a new token
       const newToken = response.data.data.accessToken;
       localStorage.setItem('token', newToken); // Update token in localStorage
-
+      logout();
       navigate("/");
     } catch (error) {
       alert("Logout failed:");

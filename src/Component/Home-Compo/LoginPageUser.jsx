@@ -4,11 +4,13 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { MdEmail } from 'react-icons/md';
 import { useAuth } from '../../Context/AuthContext';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 const LoginPageUser = () => {
     const [password, setPassword] = useState('');
     const [email, setEmail] = useState('');
     const [error, setError] = useState('');
+    const [showPassword, setShowPassword] = useState(false);
     const navigate = useNavigate();
     const { login } = useAuth();
 
@@ -26,7 +28,6 @@ const LoginPageUser = () => {
                 password: password,
             });
             
-           
             if(response.data.success){
                 alert('Login success');
                 const accessToken = response.data.data.accessToken;
@@ -43,9 +44,12 @@ const LoginPageUser = () => {
                 setError('Login failed. Please check your credentials and try again.');
             }
         } catch (error) {
-            
-            setError("User Not Found With This Email Id and Passowrd.");
+            setError("User Not Found With This Email Id and Password.");
         }
+    };
+
+    const togglePasswordVisibility = () => {
+        setShowPassword(!showPassword);
     };
 
     return (
@@ -68,19 +72,26 @@ const LoginPageUser = () => {
                         required
                     />
                 </div>
-                <div className='flex mt-10 md:ml-0 ml-[2rem]'>
+                <div className='flex mt-10 md:ml-0 ml-[2rem] relative'>
                     <label htmlFor='password' className='lg:w-12 w-14 bg-orange-500 text-white'>
                         <IoLockClosedSharp className='text-3xl md:mt-2 lg:mt-1 mt-3 lg:ml-2 ml-3' />
                     </label>
                     <input
                         className='lg:w-[20rem] lg:h-[3rem] w-[25rem] h-[4rem] ml-3 pl-2'
-                        type='password'
+                        type={showPassword ? 'text' : 'password'}
                         id='password'
                         placeholder='Password'
                         value={password}
                         onChange={(e) => setPassword(e.target.value.trim())}
                         required
                     />
+                    <button
+                        type='button'
+                        onClick={togglePasswordVisibility}
+                        className='absolute right-3 top-1/2 transform -translate-y-1/2 text-xl text-gray-700'
+                    >
+                        {showPassword ? <FaEyeSlash /> : <FaEye />}
+                    </button>
                 </div>
                 <hr className='border-white mt-16'></hr>
                 {error && <p className='text-red-500 mt-4'>{error}</p>}

@@ -9,6 +9,7 @@ import Input from "./Input";
 import SearchForm from "./SortBy";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../Context/AuthContext";
 
 
 
@@ -16,6 +17,7 @@ function AdminNav() {
   let [Incount, setInCount] = useState(false);
   let [Sort, setSort] = useState(false);
   const navigate = useNavigate();
+  const {logout}=useAuth();
 
 
   let New = () => {
@@ -46,7 +48,7 @@ function AdminNav() {
 
       const newAdminToken = response.data.data.accessToken;
       localStorage.setItem('adminToken', newAdminToken); // Update adminToken in localStorage
-
+      logout();
       navigate("/");
     } catch (error) {
        alert("Logout failed:");

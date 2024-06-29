@@ -100,7 +100,7 @@ const TotalForm = () => {
   return (
     <>
       <div className="flex justify-center">
-        <img src={imageUrls[currentImageIndex]} className=" w-[20rem] h-[10rem]" alt="placeholder" />
+        <img src={imageUrls[currentImageIndex]} className=" w-[40rem] h-[13rem]" alt="placeholder" />
       </div>
       <div className="border-black border-spacing-3 flex justify-center lg:w-full w-[60rem] md:w-[70rem]">
         <div className="border border-black mt-4 lg:h-[60rem] lg:w-[60rem] md:w-[60rem] md:h-[60rem] h-[60rem] md:p-0 ">
