@@ -20,10 +20,12 @@ function Nav(){
             
            
            <div className='flex'>
+            <Link to={"https://docs.google.com/forms/d/e/1FAIpQLSe7JGhQgwiS2j18BYpA0lOK7vV7Xvw9VA7Ys0WT-IzuC7wnSQ/viewform?embedded=true"}>
            <Button
                  item2="Sign in"
                  tailwindClasses="lg:pl-10 md:pl-8 pl-6"
                />
+           </Link>
            <Link to={"/login"}>
               <Button
                  item2="Login"
