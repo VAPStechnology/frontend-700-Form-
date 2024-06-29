@@ -6,7 +6,8 @@ import { Link } from 'react-router-dom'
 function Nav(){
     return(
         <>
-        <div className="absolute lg:w-full w-[60rem] md:w-[70rem] h-full mt-10 z-20">
+
+<div className="absolute lg:w-full w-[60rem] md:w-[70rem] h-full mt-10 z-20">
            <div className='flex justify-between'>
            <div>
                <img 
