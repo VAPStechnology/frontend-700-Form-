@@ -76,7 +76,7 @@ const TotalForm = () => {
     setTotalForm((prevTotal) => prevTotal - 1);
 
     // Disable form submission button after reaching 5 forms
-    if (formCount + 1 >= 5) {
+    if (formCount + 1 >= 700) {
       setIsFormDisabled(true);
     }
   };
