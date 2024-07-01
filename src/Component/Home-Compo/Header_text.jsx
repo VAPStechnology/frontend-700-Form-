@@ -3,6 +3,10 @@ function Header_text() {
     <>
       <div className="absolute z-20   lg:w-full w-[60rem] md:w-[70rem]">
         <div className="mt-[20rem] lg:ml-[5rem] md:ml-[6rem] ml-[1rem]">
+       
+         <h1 className="font-semibold lg:text-[3rem] md:text-[2.5rem] text-[1.6rem] text-white font-Roboto">
+         Aspire Career Consultancy
+          </h1>
           <h1 className="font-semibold lg:text-[2.5rem] md:text-[2rem] text-[1.6rem] text-white font-Roboto">
           Unlocking Opportunities, One Career at a Time
           </h1>

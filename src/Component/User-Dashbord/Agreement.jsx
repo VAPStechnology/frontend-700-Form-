@@ -1,5 +1,5 @@
 import AgreementPage1 from '/Images/AgreementPage1.jpg'
-import AgreementPage2 from '/Images/AgreementPage2.jpg'
+import AgreementPage2 from '/Images/AgreementPage2.jpeg'
 import { TiHomeOutline } from "react-icons/ti";
 import { Link } from "react-router-dom";
 import { useAuth } from '../../Context/AuthContext';

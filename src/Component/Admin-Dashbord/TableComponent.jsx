@@ -93,6 +93,7 @@ const TableComponent = () => {
             <th className="border border-gray-400 px-4 py-2 w-60">Name</th>
             <th className="border border-gray-400 px-4 py-2 w-96">Email</th>
             <th className="border border-gray-400 px-4 py-2 w-60">Username</th>
+            <th className="border border-gray-400 px-4 py-2 w-60">Login User</th>
             <th className="border border-gray-400 px-4 py-2 w-60">Function</th>
           </tr>
         </thead>

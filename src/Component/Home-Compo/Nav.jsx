@@ -1,6 +1,6 @@
 import Button from '../ReuseableComponent/Button';
 import { IoIosLogOut } from "react-icons/io";
-import Logo from '/Images/Logo.jpg'
+import Logo from '/Images/Logo.jpeg'
 import { Link } from 'react-router-dom'
 
 function Nav(){
@@ -12,7 +12,7 @@ function Nav(){
            <div>
                <img 
                src={Logo}
-               className='lg:w-40 md:w-30 w-20 md:ml-10 ml-4'
+               className='lg:w-40  md:w-30 w-20 md:ml-10 ml-4'
                alt="Logo"
                />
            </div>

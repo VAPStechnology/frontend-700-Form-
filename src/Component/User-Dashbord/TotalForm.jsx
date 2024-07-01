@@ -113,16 +113,16 @@ const TotalForm = () => {
           </div>
 
           <div className="flex justify-center mt-10 space-x-20">
-            <div className="w-[20rem] h-[7rem] flex flex-col justify-between mr-4">
+            <div className="w-[20rem] h-[7rem] flex flex-col justify-between mr-4 font-semibold">
               {[
-                "phone",
-                "acNo",
-                "address",
-                "state",
-                "dateOfBirth",
-                "licenseState",
-                "ssn",
-                "bankName",
+                "Phone",
+                "AcNo",
+                "Address",
+                "State",
+                "SateOfBirth",
+                "LicenseState",
+                "Ssn",
+                "BankName",
               ].map((field) => (
                 <React.Fragment key={field}>
                   <label htmlFor={field}>{field}</label>
@@ -137,16 +137,16 @@ const TotalForm = () => {
                 </React.Fragment>
               ))}
             </div>
-            <div className="w-[20rem] h-[7rem] flex flex-col justify-between">
+            <div className="w-[20rem] h-[7rem] flex flex-col justify-between font-semibold">
               {[
-                "loanAmount",
-                "city",
-                "zip",
-                "licenseNumber",
-                "ipAddress",
-                "firstName",
-                "lastName",
-                "emailId",
+                "LoanAmount",
+                "City",
+                "Zip",
+                "LicenseNumber",
+                "IpAddress",
+                "FirstName",
+                "LastName",
+                "EmailId",
               ].map((field) => (
                 <React.Fragment key={field}>
                   <label htmlFor={field}>{field}</label>

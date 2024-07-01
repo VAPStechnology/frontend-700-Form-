@@ -3,7 +3,7 @@ import { IoIosContact } from "react-icons/io";
 import { MdOutlineEmail } from "react-icons/md";
 import { IoSettingsOutline } from "react-icons/io5";
 import { IoIosLogOut } from "react-icons/io";
-import Logo from "/Images/Logo.jpg";
+import Logo from "/Images/Logo.jpeg";
 import { FaSearch } from "react-icons/fa";
 import Button from "../ReuseableComponent/Button";
 import { useNavigate } from "react-router-dom";
@@ -65,7 +65,7 @@ function UserNav() {
     <>
       <div className="bg-[#101D30] lg:w-full w-[60rem] md:w-[70rem] h-[6rem] flex justify-between">
         <div className="ml-9">
-          <img src={Logo} className="md:w-28 w-20 pt-3" alt="Logo" />
+          <img src={Logo} className="md:w-28  w-20 pt-1" alt="Logo" />
         </div>
 
         <div className="text-white flex md:space-x-10 pt-16 md:text-lg text-[1rem] space-x-4">
