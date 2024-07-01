@@ -65,7 +65,7 @@ function UserNav() {
     <>
       <div className="bg-[#101D30] lg:w-full w-[60rem] md:w-[70rem] h-[6rem] flex justify-between">
         <div className="ml-9">
-          <img src={Logo} className="md:w-28  w-20 pt-1" alt="Logo" />
+          <img src={Logo} className=" w-28 h-16 pt-2" alt="Logo" />
         </div>
 
         <div className="text-white flex md:space-x-10 pt-16 md:text-lg text-[1rem] space-x-4">

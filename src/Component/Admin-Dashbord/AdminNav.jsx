@@ -65,7 +65,7 @@ function AdminNav() {
           <div className="flex justify-between ml-20 mr-20 lg:space-x-72">
             {/* left side */}
             <div className="flex space-x-20">
-              <img src={Logo} className="w-28 mt-[-1.7rem]" alt="Logo"></img>
+              <img src={Logo} className=" w-28 h-16 mt-[-1rem]" alt="Logo"></img>
               <div
                 className="hover:bg-white w-[8rem] h-[3rem] text-center flex justify-center text-xl pt-2 hover:text-[#EA5455] rounded-lg text-white cursor-pointer"
                 onClick={New}

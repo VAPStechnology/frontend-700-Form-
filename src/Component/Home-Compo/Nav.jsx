@@ -12,7 +12,7 @@ function Nav(){
            <div>
                <img 
                src={Logo}
-               className='lg:w-40  md:w-30 w-20 md:ml-10 ml-4'
+               className=' w-28 h-16 md:ml-10 ml-4'
                alt="Logo"
                />
            </div>

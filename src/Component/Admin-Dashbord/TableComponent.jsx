@@ -3,11 +3,13 @@ import AdminTable from "../ReuseableComponent/AdminTable";
 import { UserContext } from "../../Context/UserContext";
 import axios from "axios";
 import SearchForm from "./SortBy";
+import ChangePassowordOFUSer from "./ChangePassowrdOFUSer";
 
 const TableComponent = () => {
   const { users, setUsers, username, setUsername } = useContext(UserContext);
   const [searchResults, setSearchResults] = useState([]);
   const [searchUsername, setSearchUsername] = useState('');
+  const [showChangePassword, setShowChangePassword] = useState(false); // State for showing ChangePasswordOFUSer component
 
   const fetchUsers = async () => {
     const token = localStorage.getItem("adminToken");
@@ -77,14 +79,25 @@ const TableComponent = () => {
 
   return (
     <div className="lg:w-full w-[60rem] md:w-[70rem] h-[100rem]">
-      <div className="flex justify-center mt-2">
+      <div className="flex flex-col items-center justify-center  mt-2">
+        <br />
         <button
           className="mb-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
           onClick={fetchUsers}
         >
           Refresh
         </button>
+        <button 
+          className="flex  font-bold  p-2  rounded-lg bg-blue-600 text-white text-lg mb-2"
+          onClick={() => setShowChangePassword(!showChangePassword)} // Toggle the visibility of ChangePasswordOFUSer component
+        >
+          Change Password Of User
+        </button>
+        {showChangePassword && <ChangePassowordOFUSer />}
       </div>
+      
+     
+      <p className="flex justify-center items-center font-bold text-xl mt-10">Search User</p>
       <SearchForm handleSearch={handleSearch} />
       <table className="lg:w-full w-[60rem] md:w-[70rem]">
         <thead>
@@ -93,7 +106,6 @@ const TableComponent = () => {
             <th className="border border-gray-400 px-4 py-2 w-60">Name</th>
             <th className="border border-gray-400 px-4 py-2 w-96">Email</th>
             <th className="border border-gray-400 px-4 py-2 w-60">Username</th>
-            <th className="border border-gray-400 px-4 py-2 w-60">Login User</th>
             <th className="border border-gray-400 px-4 py-2 w-60">Function</th>
           </tr>
         </thead>
