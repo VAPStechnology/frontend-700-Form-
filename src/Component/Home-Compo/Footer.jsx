@@ -3,7 +3,7 @@ import Logo from '/Images/Logo.jpeg'
 function Footer() {
   return (
     <>
-      <div className="  lg:w-full w-[60rem] md:w-[70rem] h-[30rem] bg-[#101D30] font-Roboto">
+      <div className="  lg:w-full w-[60rem] md:w-[70rem] h-[34rem] bg-[#101D30] font-Roboto">
         <div className="flex ml-40 space-x-16 pt-10">
           <div>
             <img src={Logo}
@@ -18,7 +18,7 @@ function Footer() {
         </div>
         <div>
             <hr className='border-white ml-40 mr-40 mt-60'></hr><br />
-           <div className='text-md text-white ml-40'>&copy;9G7Q+G58, Saroor Nagar, HUDA Complex Area, District: Hyderabad, Pin: 500035, State: Telangana.</div>
+           <div className='text-md text-white ml-40 '>&copy;9G7Q+G58, Saroor Nagar, HUDA Complex Area, District: Hyderabad, Pin: 500035, State: Telangana.</div>
         </div>
       </div>
     </>
