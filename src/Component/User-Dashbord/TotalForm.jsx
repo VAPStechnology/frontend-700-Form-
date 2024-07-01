@@ -25,7 +25,7 @@ const TotalForm = () => {
   });
 
   const [formCount, setFormCount] = useState(0);
-  const [totalForm, setTotalForm] = useState(5); // Adjusted totalForm limit to 5
+  const [totalForm, setTotalForm] = useState(700);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isFormDisabled, setIsFormDisabled] = useState(false);
 
@@ -55,7 +55,7 @@ const TotalForm = () => {
             localStorage.setItem("token", data.data.accessToken);
           }
 
-          // Disable form submission button when form count reaches 5
+          // Disable form submission button when form count reaches 700
           if (fetchedFormCount >= 700) {
             setIsFormDisabled(true);
           }
@@ -75,16 +75,14 @@ const TotalForm = () => {
     setFormCount((prevCount) => prevCount + 1);
     setTotalForm((prevTotal) => prevTotal - 1);
 
-    // Disable form submission button after reaching 5 forms
+    // Update image index when form is submitted
+    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % imageUrls.length);
+
+    // Disable form submission button after reaching 700 forms
     if (formCount + 1 >= 700) {
       setIsFormDisabled(true);
     }
   };
-
-  useEffect(() => {
-    const newIndex = formCount % imageUrls.length;
-    setCurrentImageIndex(newIndex);
-  }, [formCount]);
 
   const handleInputChange = (e) => {
     const { id, value } = e.target;
@@ -99,17 +97,17 @@ const TotalForm = () => {
       <div className="flex justify-center">
         <img
           src={imageUrls[currentImageIndex]}
-          className=" w-[40rem] h-[13rem]"
+          className="w-[40rem] h-[13rem]"
           alt="placeholder"
         />
       </div>
       <div className="border-black border-spacing-3 flex justify-center lg:w-full w-[60rem] md:w-[70rem]">
         <div className="border border-black mt-4 lg:h-[60rem] lg:w-[60rem] md:w-[60rem] md:h-[60rem] h-[60rem] md:p-0 ">
           <div className="bg-[#817d7d] lg:w-[60rem] md:w-[60rem] w-[50rem] h-20 pl-12 md:mt-0 ">
-            <div className=" text-xl font-semibold">
+            <div className="text-xl font-semibold">
               TotalForm Pending Count: {totalForm}
             </div>
-            <div className=" text-xl font-semibold">
+            <div className="text-xl font-semibold">
               Form Submit Count: {formCount}
             </div>
           </div>
