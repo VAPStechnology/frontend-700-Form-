@@ -63,7 +63,7 @@ const TotalForm = () => {
           console.error("Failed to fetch form count");
         }
       } catch (error) {
-        console.error("Error fetching form count:", error);
+        console.error("Error fetching form count:");
       }
     };
 
@@ -71,7 +71,8 @@ const TotalForm = () => {
   }, [username, login]);
 
   const handleFormSubmit = async () => {
-    await handleSubmit(formData, setFormData, setFormCount, setTotalForm);
+    
+    await handleSubmit(formData, setFormData);
     setFormCount((prevCount) => prevCount + 1);
     setTotalForm((prevTotal) => prevTotal - 1);
 
@@ -115,14 +116,14 @@ const TotalForm = () => {
           <div className="flex justify-center mt-10 space-x-20">
             <div className="w-[20rem] h-[7rem] flex flex-col justify-between mr-4 font-semibold">
               {[
-                "Phone",
-                "AcNo",
-                "Address",
-                "State",
-                "SateOfBirth",
-                "LicenseState",
-                "Ssn",
-                "BankName",
+                "phone",
+                "acNo",
+                "address",
+                "state",
+                "dateOfBirth",
+                "licenseState",
+                "ssn",
+                "bankName",
               ].map((field) => (
                 <React.Fragment key={field}>
                   <label htmlFor={field}>{field}</label>
@@ -139,14 +140,14 @@ const TotalForm = () => {
             </div>
             <div className="w-[20rem] h-[7rem] flex flex-col justify-between font-semibold">
               {[
-                "LoanAmount",
-                "City",
-                "Zip",
-                "LicenseNumber",
-                "IpAddress",
-                "FirstName",
-                "LastName",
-                "EmailId",
+                "loanAmount",
+                "city",
+                "zip",
+                "licenseNumber",
+                "ipAddress",
+                "firstName",
+                "lastName",
+                "emailId",
               ].map((field) => (
                 <React.Fragment key={field}>
                   <label htmlFor={field}>{field}</label>
