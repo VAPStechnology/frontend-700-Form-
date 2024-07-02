@@ -59,11 +59,14 @@ const TotalForm = () => {
           if (fetchedFormCount >= 700) {
             setIsFormDisabled(true);
           }
+
+          // Update current image index based on form count
+          setCurrentImageIndex(fetchedFormCount % imageUrls.length);
         } else {
           console.error("Failed to fetch form count");
         }
       } catch (error) {
-        console.error("Error fetching form count:");
+        console.error("Error fetching form count:", error);
       }
     };
 
@@ -71,7 +74,6 @@ const TotalForm = () => {
   }, [username, login]);
 
   const handleFormSubmit = async () => {
-    
     await handleSubmit(formData, setFormData);
     setFormCount((prevCount) => prevCount + 1);
     setTotalForm((prevTotal) => prevTotal - 1);
