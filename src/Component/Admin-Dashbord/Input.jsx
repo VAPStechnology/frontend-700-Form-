@@ -124,7 +124,7 @@ const Register = () => {
                             <input
                                 className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
                                 id='password'
-                                type='password'
+                                type=''
                                 placeholder='Enter Password'
                                 name='password'
                                 value={formData.password}
